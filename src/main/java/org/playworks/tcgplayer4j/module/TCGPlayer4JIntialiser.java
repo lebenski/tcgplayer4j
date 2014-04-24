@@ -1,6 +1,6 @@
 package org.playworks.tcgplayer4j.module;
 
-import org.playworks.tcgplayer4j.service.CardPriceService;
+import org.playworks.tcgplayer4j.service.TCGPlayerCardPriceService;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -13,8 +13,8 @@ public class TCGPlayer4JIntialiser {
 	    injector = Guice.createInjector(new TCGPlayer4JModule(apiKey));
 	}
 	
-	public CardPriceService getCardPriceService() {
-		return injector.getInstance(CardPriceService.class);
+	public TCGPlayerCardPriceService getCardPriceService() {
+		return injector.getInstance(TCGPlayerCardPriceService.class);
 	}
 	
 }

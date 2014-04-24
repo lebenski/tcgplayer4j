@@ -15,13 +15,13 @@ import com.google.api.client.xml.XmlObjectParser;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-public class CardPriceServiceImpl implements CardPriceService {
+public class TCGPlayerCardPriceServiceImpl implements TCGPlayerCardPriceService {
 
 	private String apiKey;
 	private HttpRequestFactory requestFactory;
 	
 	@Inject
-	public CardPriceServiceImpl(@Named("api.key") String apiKey) {
+	public TCGPlayerCardPriceServiceImpl(@Named("api.key") String apiKey) {
 		this.apiKey = apiKey;
 		this.requestFactory = new NetHttpTransport().createRequestFactory();
 	}

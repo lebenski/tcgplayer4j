@@ -3,8 +3,8 @@ package org.playworks.tcgplayer4j.module;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.playworks.tcgplayer4j.service.CardPriceService;
-import org.playworks.tcgplayer4j.service.CardPriceServiceImpl;
+import org.playworks.tcgplayer4j.service.TCGPlayerCardPriceService;
+import org.playworks.tcgplayer4j.service.TCGPlayerCardPriceServiceImpl;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
@@ -20,7 +20,7 @@ public class TCGPlayer4JModule extends AbstractModule  {
 	@Override
 	protected void configure() {
 		bindProperties();
-	    bind(CardPriceService.class).to(CardPriceServiceImpl.class);
+	    bind(TCGPlayerCardPriceService.class).to(TCGPlayerCardPriceServiceImpl.class);
 	}
 
 	private void bindProperties() {

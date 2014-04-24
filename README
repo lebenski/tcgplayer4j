@@ -10,7 +10,7 @@ Usage:
 
 TCGPlayerInitialiser initialiser = new TCGPlayerInitialiser(YOUR_API_KEY);
 
-CardPriceService cardPriceService = initialiser.getCardPriceService();
+TCGPlayerCardPriceService cardPriceService = initialiser.getCardPriceService();
 
 CardPrice cardPrice = cardPriceService.getCardPrice(CARD_NAME, SET_NAME); e.g.
 CardPrice cardPrice = cardPriceService.getCardPrice("Avatar of Woe", "Prophecy");
